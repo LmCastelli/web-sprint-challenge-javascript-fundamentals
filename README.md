@@ -26,13 +26,33 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+    .map() is used to alter something about an array and return a new array, you might use .map() how we did to convert the animal names to lowercase, with item.animal_name.toLowerCase(), which changes all the names to lowercase and returns that new array. 
+    
+    Next, .reduce() is used to return a single function, usually a total of some sort or maybe an average. You might want to calculate the total paintings made across an array of artists, and .reduce could comb over the array and return a running total of paintings painted. 
+    
+    Finally, .filter() is like .map() in that it also returns a new array, however, .filter() checks for a boolean statement as it goes over the main array, and then creates the new array based on whether the data was true for that check or not. For example, if you want to see cities with a population above 500,000, you could filter for item.population > 500,000 and then the new array would have only cities with a higher population than that. 
+
 2. Explain the difference between a callback and a higher order function.
+
+    A callback function that is made to be passed into another function(the higher order function). The higher order function takes that callback function as an argument and utilizes it. Additionally, higher order functions can return functions.
 
 3. Explain what a closure is.
 
+    Closure is when an inner function reaches out to an outer function, because with scope an inner can reach outwards but not the opposite. When a function is inside another function, it has access to all the outer function's variable, and if it needs to reach out that would be closure.
+
 4. Describe the four principles of the 'this' keyword.
 
+    -The first principle, Window Binding, states that if 'this' has no context, it attaches to and returns the window, which is not something we want (maybe rarely, but normally not). So if 'this' doesn't know what it is a part of, it defaults to the window. 
+
+    -The second principle is Implicit Binding, which may be the most straightforward principle, and it states that whatever is to the left of the dot when the function is used is what 'this' refers to. If we have a speak method in a object for Bob for example, Bob.speak() would mean 'this' is Bob and Bob would say/return whatever the speak function message is.
+
+    -Thirdly, Explicit Binding. Explicit binding allows us to choose what to we want our 'this' to refer to, using .call(), .apply(), and .bind(). .call() lets us pass in one argument at a time, .apply() passes the arguments at once as an array, and .bind() is also one at a time, but it makes a new function instead of invoking the current one. 
+
+    -Finally, New Binding. When we create a new object using a constructor, new binding states that 'this' now will point to the 'new' object.
+
 5. Why do we need super() in an extended class?
+
+    We have to use super() to access the parent constructor, by passing in the arguments we want to utilize in the super(args) keyword. We need to use super before we can use 'this' to make 'this' point to that object. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
